@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white min-h-screen overflow-x-hidden font-sans;
+    background-image: radial-gradient(circle at top right, #1a1a2e 0%, #050505 50%);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400;
+  }
+  
+  .glass-panel {
+    @apply bg-[rgba(20,20,25,0.7)] backdrop-blur-md border border-[rgba(255,255,255,0.08)];
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] hover:bg-accent-hover hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-white border border-[rgba(255,255,255,0.08)] hover:bg-[rgba(255,255,255,0.03)] hover:border-white;
+  }
+
+  .form-control {
+    @apply w-full px-4 py-3 bg-black/20 border border-[rgba(255,255,255,0.08)] rounded-lg text-white transition-colors duration-300 focus:outline-none focus:border-accent;
+  }
+}
